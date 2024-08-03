@@ -1,0 +1,343 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Karbon Ayakizi Hesaplayıcı</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/afterburner.css">
+
+    <!-- Favicons -->
+    <link href="./assets/image/favicon.png" rel="icon">
+    <link href="./assets/image/apple-touch-icon.png" rel="apple-touch-icon">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="ui grid" style="margin-bottom: 20px;">
+            <div class="eight wide column">
+                <a href="./karbon-hesapla.html">
+                    <h1 class="ui header">Karbon Ayakizi Hesaplayıcı</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="ui fluid steps">
+            <a class="active step" data-tab="airplane">
+                <i class="plane icon"></i>
+                <div class="content">
+                    <div class="title">Hava</div>
+                    <div class="description">Hava Yolculuğu</div>
+                </div>
+            </a>
+            <a class="step" data-tab="vehicle">
+                <i class="road icon"></i>
+                <div class="content">
+                    <div class="title">Araç</div>
+                    <div class="description">Kara Yolculuğu</div>
+                </div>
+            </a>
+            <a class="step" data-tab="electricity">
+                <i class="lightning icon"></i>
+                <div class="content">
+                    <div class="title">Elektrik</div>
+                    <div class="description">Elektrik Tüketimi</div>
+                </div>
+            </a>
+            <a class="step" data-tab="heating">
+                <i class="fire icon"></i>
+                <div class="content">
+                    <div class="title">Isınma</div>
+                    <div class="description">Isınma Değerleri</div>
+                </div>
+            </a>
+            <a class="step" data-tab="results">
+                <i class="leaf icon"></i>
+                <div class="content">
+                    <div class="title">Sonuçlar</div>
+                    <div class="description">Karbon Ayakizi</div>
+                </div>
+            </a>
+        </div>
+        <div class="ui segment">
+
+            <div class="ui active tab" data-tab="airplane">
+                <h2 class="ui header">Hava Yolculuğu</h2>
+                <div class="actions">
+                    <button class="ui button" data-action="airplane-add">Yeni Uçuş Ekle</button>
+                    <button class="ui green icon right labeled button" data-switch="vehicle"><i
+                            class="icon arrow right"></i>Hesapla ve Devam Et</button>
+                </div>
+                <div class="ui divider"></div>
+
+                <form class="ui form">
+                    <div class="ui divided relaxed list">
+                        <div class="item" data-id="1">
+                            <div class="content">
+                                <div class="four fields">
+                                    <div class="field">
+                                        <label>Uçuş Süresi - Tek Yön</label>
+                                        <select class="ui dropdown" name="airplane-hour">
+                                            <option value="0.5">0.5 Saat</option>
+                                            <option value="1">1 Saat</option>
+                                            <option value="1.5">1.5 Saat</option>
+                                            <option value="2">2 Saat</option>
+                                            <option value="2.5">2.5 Saat</option>
+                                            <option value="3">3 Saat</option>
+                                            <option value="3.5">3.5 Saat</option>
+                                            <option value="4">4 Saat</option>
+                                            <option value="4.5">4.5 Saat</option>
+                                            <option value="5">5 Saat</option>
+                                            <option value="5.5">5.5 Saat</option>
+                                            <option value="6">6 Saat</option>
+                                            <option value="6.5">6.5 Saat</option>
+                                            <option value="7">7 Saat</option>
+                                            <option value="7.5">7.5 Saat</option>
+                                            <option value="8">8 Saat</option>
+                                            <option value="8.5">8.5 Saat</option>
+                                            <option value="9">9 Saat</option>
+                                            <option value="9.5">9.5 Saat</option>
+                                            <option value="10">10 Saat</option>
+                                            <option value="10.5">10.5 Saat</option>
+                                            <option value="11">11 Saat</option>
+                                            <option value="11.5">11.5 Saat</option>
+                                            <option value="12">12 Saat</option>
+                                            <option value="12.5">12.5 Saat</option>
+                                            <option value="13">13 Saat</option>
+                                            <option value="13.5">13.5 Saat</option>
+                                            <option value="14">14 Saat</option>
+                                            <option value="14.5">14.5 Saat</option>
+                                            <option value="15">15 Saat</option>
+                                            <option value="15.5">15.5 Saat</option>
+                                            <option value="16">16 Saat</option>
+                                            <option value="16.5">16.5 Saat</option>
+                                            <option value="17">17 Saat</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label>Belirtilen Süredeki Uçuş Sayısı</label>
+                                        <input type="number" value="0" min="0" name="airplane-count">
+                                    </div>
+                                    <div class="field"></div>
+                                    <div class="field">
+                                        <label>&nbsp;</label>
+                                        <button class="right floated compact small ui button"
+                                            data-action="airplane-remove">Vazgeç</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="ui tab" data-tab="vehicle">
+                <h2 class="ui header">Kara Yolculuğu</h2>
+                <div class="actions">
+                    <button class="ui green icon right labeled button" data-switch="electricity"><i
+                            class="icon arrow right"></i>Hesapla ve Devam Et</button>
+                </div>
+                <div class="ui divider"></div>
+
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <form class="ui form">
+                            <div class="field">
+                                <label>Yakıt Türü</label>
+                                <select class="ui dropdown" name="vehicle-type">
+                                    <option selected="selected">-- SEÇİNİZ --</option>
+                                    <option value="gasoline">Benzin</option>
+                                    <option value="diesel">Motorin</option>
+                                    <option value="lpg">LPG</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Yıllık Toplam Tüketim (lt)</label>
+                                <input type="number" min="0" name="vehicle-value" value="0">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="ui tab" data-tab="electricity">
+                <h2 class="ui header">Elektrik Tüketimi</h2>
+                <div class="actions">
+                    <button class="ui green icon right labeled button" data-switch="heating"><i
+                            class="icon arrow right"></i>Hesapla ve Devam Et</button>
+                </div>
+                <div class="ui divider"></div>
+
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <form class="ui form">
+                            <div class="field">
+                                <label>Yıllık Toplam Tüketim (kWh)</label>
+                                <input type="number" min="0" name="electricity-value" value="0">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+
+                    </div>
+                </div>
+
+                <br>
+                CO<font size="1">2</font> salım katsayısı = 0.472 olarak alınmıştır.
+            </div>
+            <div class="ui tab" data-tab="heating">
+                <h2 class="ui header">Isınma Değerleri</h2>
+                <div class="actions">
+                    <button class="ui green icon right labeled button" data-switch="results"><i
+                            class="icon checkmark"></i>Hesapla ve Sonuçları Göster</button>
+                </div>
+                <div class="ui divider"></div>
+
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <form class="ui form">
+                            <div class="field">
+                                <label>Yakıt Türü</label>
+                                <select class="ui dropdown" name="heating-type">
+                                    <option selected="selected">-- SEÇİNİZ --</option>
+                                    <option value="natural">Doğal Gaz</option>
+                                    <option value="coal">Kömür</option>
+                                    <option value="lpg">LPG</option>
+                                    <option value="fueloil">Fuel-Oil</option>
+                                    <option value="biogas">Odun/Biyokütle/Biyogaz</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Yıllık Toplam Tüketim<span id="key"></span></label>
+                                <input type="number" min="0" name="heating-value" value="0">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="ui tab" data-tab="results">
+                <h2 class="ui header">Karbon Ayakizi Sonuçları</h2>
+                <div class="ui divider"></div>
+
+                <results>
+                    <div class="ui divided list">
+                        <div class="item" id="airplane">
+                            <div class="content right floated" name="key">kg</div>
+                            <div class="content right floated" name="value">
+                                0
+                            </div>
+                            <div class="content">
+                                <div class="header">Hava Yolculuğu</div>
+                            </div>
+                        </div>
+                        <div class="item" id="vehicle">
+                            <div class="content right floated" name="key">kg</div>
+                            <div class="content right floated" name="value">
+                                0
+                            </div>
+                            <div class="content">
+                                <div class="header">Kara Yolculuğu</div>
+                            </div>
+                        </div>
+                        <div class="item" id="electricity">
+                            <div class="content right floated" name="key">kg</div>
+                            <div class="content right floated" name="value">
+                                0
+                            </div>
+                            <div class="content">
+                                <div class="header">Elektrik Tüketimi</div>
+                            </div>
+                        </div>
+                        <div class="item" id="heating">
+                            <div class="content right floated" name="key">kg</div>
+                            <div class="content right floated" name="value">
+                                0
+                            </div>
+                            <div class="content">
+                                <div class="header">Isınma Değerleri</div>
+                            </div>
+                        </div>
+                        <div class="item" id="total">
+                            <div class="content right floated" name="key">ton</div>
+                            <div class="content right floated" name="value">
+                                0
+                            </div>
+                            <div class="content">
+                                <div class="header">Toplam CO<sub>2</sub> Salımı</div>
+                            </div>
+                        </div>
+                    </div>
+                </results>
+                <br><br>
+                Türkiye 2013 kişi başı sera gazı salımı ortalaması 6,04 tCO<sub>2</sub>'dir.
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <a href="../index.html" target="_blank">
+                        <img src="./assets/image/footer-carbon-logo.jpg">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-sub">
+            <div class="ui grid">
+                <div class="eight wide column">
+
+                </div>
+                <div class="eight wide column right aligned">
+                    <a href="../index.html" target="_blank">Yeşil İzler</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="assets/js/jquery.address.min.js"></script>
+    <script src="assets/js/semantic.min.js"></script>
+
+    <script src="assets/js/app.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            carbon.language = { "title": "Karbon Ayakizi Hesaplay\u0131c\u0131", "select-language": "Select Language", "calculate-continue": "Hesapla ve Devam Et", "calculate-finish": "Hesapla ve Sonu\u00e7lar\u0131 G\u00f6ster", "cancel": "Vazge\u00e7", "hour": "Saat", "hours": "Saat", "select": "-- SE\u00c7\u0130N\u0130Z --", "airplane_title": "Hava Yolculu\u011fu", "airplane_menu": "Hava", "airplane_description": "Hava Yolculu\u011fu", "airplane-add": "Yeni U\u00e7u\u015f Ekle", "airplane-hour": "U\u00e7u\u015f S\u00fcresi - Tek Y\u00f6n", "airplane-count": "Belirtilen S\u00fcredeki U\u00e7u\u015f Say\u0131s\u0131", "vehicle_title": "Kara Yolculu\u011fu", "vehicle_menu": "Ara\u00e7", "vehicle_description": "Kara Yolculu\u011fu", "vehicle-type": "Yak\u0131t T\u00fcr\u00fc", "vehicle-value": "Y\u0131ll\u0131k Toplam T\u00fcketim (lt)", "vehicle-gasoline": "Benzin", "vehicle-diesel": "Motorin", "vehicle-lpg": "LPG", "electricity_title": "Elektrik T\u00fcketimi", "electricity_menu": "Elektrik", "electricity_description": "Elektrik T\u00fcketimi", "electricity-value": "Y\u0131ll\u0131k Toplam T\u00fcketim (kWh)", "electricity-content": "CO<font size=\"1\">2<\/font> sal\u0131m katsay\u0131s\u0131 = 0.472 olarak al\u0131nm\u0131\u015ft\u0131r.", "heating_title": "Is\u0131nma De\u011ferleri", "heating_menu": "Is\u0131nma", "heating_description": "Is\u0131nma De\u011ferleri", "heating-type": "Yak\u0131t T\u00fcr\u00fc", "heating-value": "Y\u0131ll\u0131k Toplam T\u00fcketim", "heating-natural": "Do\u011fal Gaz", "heating-coal": "K\u00f6m\u00fcr", "heating-lpg": "LPG", "heating-fueloil": "Fuel-Oil", "heating-biogas": "Odun\/Biyok\u00fctle\/Biyogaz", "results_title": "Karbon Ayakizi Sonu\u00e7lar\u0131", "results_menu": "Sonu\u00e7lar", "results_description": "Karbon Ayakizi", "results-total": "Toplam CO<sub>2<\/sub> Sal\u0131m\u0131", "results-text": "T\u00fcrkiye 2013 ki\u015fi ba\u015f\u0131 sera gaz\u0131 sal\u0131m\u0131  ortalamas\u0131  6,04 tCO<sub>2<\/sub>'dir." };
+        });
+    </script>
+
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+                function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+            e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'G-8R9WN53W6L', 'auto'); ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

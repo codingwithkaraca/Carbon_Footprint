@@ -1,0 +1,132 @@
+body {
+  background: url(../image/background1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+button {
+  outline: none !important;
+  font-weight: 400 !important;
+}
+main {
+  max-width: 1000px;
+  min-width: 1000px;
+  width: 1000px;
+  margin: 0 auto 0 auto !important;
+  padding: 75px 0 0 0 !important;
+}
+main > .ui.grid > .column > a .ui.header {
+  font-weight: 300 !important;
+  font-size: 36px;
+  color: #333;
+  -webkit-filter: drop-shadow(0 1px 0 #ffffff);
+  -moz-filter: drop-shadow(0 1px 0 #ffffff);
+  -ms-filter: drop-shadow(0 1px 0 #ffffff);
+  filter: drop-shadow(0 1px 0 #ffffff);
+}
+main > .ui.steps {
+  height: 80px;
+}
+main > .ui.steps > .step:first-child {
+  -webkit-border-radius: 0.3857rem 0 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0.3857rem 0 0 0;
+  -moz-background-clip: padding;
+  border-radius: 0.3857rem 0 0 0;
+  background-clip: padding-box;
+}
+main > .ui.steps > .step:last-child {
+  -webkit-border-radius: 0 0.3857rem 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0.3857rem 0 0;
+  -moz-background-clip: padding;
+  border-radius: 0 0.3857rem 0 0;
+  background-clip: padding-box;
+}
+main > .ui.steps > .step > i {
+  width: 46px;
+}
+main > .ui.steps > .step.active,
+main > .ui.steps > .step.active:hover,
+.ui.steps .step.active:after {
+  background: #efefef !important;
+}
+main > .ui.steps > .step.active > i,
+main > .ui.steps > .step.active .title,
+main > .ui.steps > .step.active .description {
+  color: #333 !important;
+}
+main > .ui.segment {
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  min-height: 500px;
+}
+main > .ui.segment > .ui.tab > h2.ui.header {
+  font-weight: 300 !important;
+  margin: 30px 0 0 0 !important;
+  display: inline-block;
+  float: left;
+}
+main > .ui.segment > .ui.tab > .actions {
+  float: right;
+  margin: 25px 0 0 0 !important;
+  display: inline-block;
+}
+main > .ui.segment > .ui.tab > .actions > .ui.button {
+  margin-right: 0;
+  margin-left: .25em;
+}
+main > .ui.segment > .ui.tab > .divider {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+}
+.ui.list > .item > .content {
+  padding-top: 10px;
+}
+.ui.list > .item .field .ui.button {
+  margin-top: 8px;
+}
+.ui.list > .item .field > label {
+  font-weight: 300 !important;
+}
+main results .item div[name=key] {
+  width: 30px;
+  margin-left: 5px !important;
+}
+main > .footer {
+  -webkit-border-radius: 0 0 0.3857rem 0.3857rem;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 0.3857rem 0.3857rem;
+  -moz-background-clip: padding;
+  border-radius: 0 0 0.3857rem 0.3857rem;
+  background-clip: padding-box;
+  height: 95px;
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  margin: 0;
+  box-shadow: 0 0 0 1px rgba(39, 41, 43, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 15px;
+}
+main > .footer > .ui.grid > .column:not(.row),
+main > .footer > .ui.grid > .row > .column {
+  position: relative;
+  float: left;
+  display: inline-block;
+}
+main > .footer img {
+  max-height: 100px;
+}
+main > .footer-sub {
+  margin-top: 10px;
+}
+main > .footer-sub a {
+  color: #fff;
+}
